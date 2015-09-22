@@ -1,0 +1,13 @@
+  <p>Title: {{title}}</p>
+
+  {{#each viewModel.body}}
+    <{{type}}> {{{html}}} </{{type}}>
+  {{/each}}
+
+
+  <h4>Authors:</h4>
+  <ul>
+      {{#each authors}}
+        <li>{{name}}</li>
+      {{/each}}
+  </ul>
