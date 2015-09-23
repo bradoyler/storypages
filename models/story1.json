@@ -1,6 +1,7 @@
 {
   "template":"story",
   "layout":"main",
+  "title":"Story 1 title",
   "headline":"Headline for story 1...",
   "bylines":[{"name":"Brad Oyler", "email":"", "fb":"", "twitter":"", "www":""}],
   "body":[
