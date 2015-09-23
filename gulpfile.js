@@ -54,7 +54,10 @@ gulp.task('build', function() {
                 console.log('### extracted page: '+ item.slug);
             });
 
-        }, 200);
+            request('http://localhost:3000/')
+                .pipe(fs.createWriteStream('dist/index.html'));
+
+        }, 400);
     });
 });
 
