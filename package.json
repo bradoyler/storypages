@@ -1,7 +1,9 @@
 {
   "name": "storypages",
   "version": "0.0.1",
+  "description": "Static story generator",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "start": "node ./bin/www"
   },
