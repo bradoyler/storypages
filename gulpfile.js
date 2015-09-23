@@ -4,7 +4,10 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     livereload = require('gulp-livereload'),
     sass = require('gulp-sass'),
-    storiesConfig = require('./storiesConfig');
+    global = require('./models/global.json');
+
+var s3 = require("gulp-s3");
+aws = JSON.parse(fs.readFileSync('./aws.json'));
 
 gulp.task('sass', function () {
   gulp.src('./public/css/*.scss')
@@ -29,6 +32,12 @@ gulp.task('develop', function () {
   });
 });
 
+
+gulp.task('upload', function() {
+    gulp.src('./dist/**')
+        .pipe(s3(aws));
+});
+
 gulp.task('build', function() {
 
     nodemon({
@@ -39,11 +48,11 @@ gulp.task('build', function() {
       console.log('### started Express');
         setTimeout(function () {
 
-            for (story in storiesConfig.stories) {
-                request('http://localhost:3000/'+ story)
-                    .pipe(fs.createWriteStream('dist/'+ story +'.html'));
-                console.log('### extracted page: '+ story);
-            }
+            global.storyCatalog.forEach(function (item) {
+                request('http://localhost:3000/'+ item.slug)
+                    .pipe(fs.createWriteStream('dist/'+ item.slug +'.html'));
+                console.log('### extracted page: '+ item.slug);
+            });
 
         }, 200);
     });

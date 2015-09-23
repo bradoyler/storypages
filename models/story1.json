@@ -1,0 +1,14 @@
+{
+  "template":"story",
+  "layout":"main",
+  "headline":"Headline for story 1...",
+  "bylines":[{"name":"Brad Oyler", "email":"", "fb":"", "twitter":"", "www":""}],
+  "body":[
+    {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
+    {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
+    {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
+    {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
+    {"type":"widget", "id":"124432342"},
+    {"type":"video", "id":"xcvcv_765fyruyt"}
+  ]
+}

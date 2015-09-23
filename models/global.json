@@ -1,0 +1,6 @@
+{
+  "site":"My Blog",
+  "domain":"bradoyler.com",
+  "analyticsId":"GA-123123",
+  "storyCatalog":[{"slug":"story1", "file":"story1.json"},{"slug":"story2", "file":"story2.json"}]
+}

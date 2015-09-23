@@ -1,22 +1,27 @@
 var express = require('express');
 var router = express.Router();
-var data = require('../storiesConfig');
+var global = require('../models/global.json')
 
 router.get('/', function(req, res) {
-    var model = data;
+    var model = {};
     model.storylist = [];
-    for (story in data.stories) {
-        model.storylist.push(story);
-    }
+    global.storyCatalog.forEach(function (item) {
+        model.storylist.push(item.slug);
+    });
+    model.global = global;
     res.render('index', model);
 });
 
 router.get('/:page', function(req, res) {
 
     var pageSlug = req.params.page;
-    var model = data.stories[pageSlug];
-    model.shared = data.shared;
-    res.render('story', model);
+    var storyMeta = global.storyCatalog.filter(function (item) {
+       return item.slug === pageSlug;
+    })[0];
+
+    var model = require('../models/'+storyMeta.file);
+    model.global = global;
+    res.render(model.template, model);
 });
 
 module.exports = router;
