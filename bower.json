@@ -5,5 +5,12 @@
     "**/.*",
     "node_modules",
     "components"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "modernizr": "~3.0.0",
+    "slick-carousel": "~1.5.8",
+    "typesettings": "~3.0.0",
+    "video.js": "~4.12.15"
+  }
 }
