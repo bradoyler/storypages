@@ -10,7 +10,7 @@ var s3 = require("gulp-s3");
 aws = JSON.parse(fs.readFileSync('./aws.json'));
 
 gulp.task('sass', function () {
-  gulp.src('./public/styles/*.scss')
+  gulp.src('./public/styles/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./public/styles'))
     .pipe(livereload());
