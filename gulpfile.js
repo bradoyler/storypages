@@ -10,14 +10,14 @@ var s3 = require("gulp-s3");
 aws = JSON.parse(fs.readFileSync('./aws.json'));
 
 gulp.task('sass', function () {
-  gulp.src('./public/css/*.scss')
+  gulp.src('./public/styles/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest('./public/styles'))
     .pipe(livereload());
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./public/css/*.scss', ['sass']);
+  gulp.watch('./public/**/*.scss', ['sass']);
 });
 
 gulp.task('develop', function () {
