@@ -10,6 +10,24 @@ var routes = require('./routes/index');
 
 var app = express();
 
+hbs = exphbs.create({
+  helpers: {
+    block: function (name) {
+      var blocks  = this._blocks,
+        content = blocks && blocks[name];
+
+      return content ? content.join('\n') : null;
+    },
+
+    contentFor: function (name, options) {
+      var blocks = this._blocks || (this._blocks = {}),
+        block  = blocks[name] || (blocks[name] = []);
+
+      block.push(options.fn(this));
+    }
+  }
+});
+
 // view engine setup
 
 app.engine('.hbs', exphbs({

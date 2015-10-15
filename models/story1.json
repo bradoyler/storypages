@@ -4,10 +4,15 @@
   "title":"Story 1 title",
   "description": "test desc",
   "url": "",
+  "keywords": "one, two, three",
   "headline":"Headline for story 1...",
   "bylines":[{"name":"Brad Oyler", "email":"", "fb":"", "twitter":"", "www":""}],
   "service": {
-    "googlefonts": ["Lora:400,400italic,700:latin", "Work+Sans:400,600,800:latin"]
+    "appleid": null,
+    "facebookid": null,
+    "googlefonts": ["Lora:400,400italic,700:latin", "Work+Sans:400,600,800:latin"],
+    "googleverfication": null,
+    "socialimage": null
   },
   "body":[
     {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
