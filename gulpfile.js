@@ -24,7 +24,7 @@ gulp.task('develop', function () {
   livereload.listen();
   nodemon({
     script: 'bin/www',
-    ext: 'js handlebars',
+    ext: 'js hbs'
   }).on('restart', function () {
     setTimeout(function () {
       livereload.changed(__dirname);
@@ -42,7 +42,7 @@ gulp.task('build', function() {
 
     nodemon({
         script: 'bin/www',
-        ext: 'js handlebars',
+        ext: 'js hbs',
         env: { 'NODE_ENV': 'production' }
     }).on('start', function () {
       console.log('### started Express');

@@ -2,8 +2,13 @@
   "template":"story",
   "layout":"main",
   "title":"Story 1 title",
+  "description": "test desc",
+  "url": "",
   "headline":"Headline for story 1...",
   "bylines":[{"name":"Brad Oyler", "email":"", "fb":"", "twitter":"", "www":""}],
+  "service": {
+    "googlefonts": ["Lora:400,400italic,700:latin", "Work+Sans:400,600,800:latin"]
+  },
   "body":[
     {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
     {"type":"p", "html":"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"},
